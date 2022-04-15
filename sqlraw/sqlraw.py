@@ -7,7 +7,6 @@ __version__ = "0.0.1"
 __maintainer__ = "Uygun Bodur"
 __email__ = "topluluk@developerkitchen.dev"
 __status__ = "Production"
-
 from typing import Optional, List
 from sqlalchemy import text
 import os

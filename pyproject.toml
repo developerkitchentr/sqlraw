@@ -1,8 +1,10 @@
 [tool.poetry]
 name = "sqlraw"
-version = "0.1.0"
+version = "0.1.2"
 description = "Path base SQL Query"
 authors = ["Uygun Bodur <uygun@dop.com.tr>"]
+repository = "https://github.com/developerkitchentr/sqlraw"
+readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.9"

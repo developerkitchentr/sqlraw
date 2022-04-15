@@ -1,4 +1,0 @@
-
-# SQLRaw
-
-Pathbase sql query
