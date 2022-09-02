@@ -172,17 +172,30 @@ class SqlRaw:
     def _convert_tolist(self, result_set):
         return [dict(r) for r in result_set]
 
+    def execute(self, params=None):
+        """
+        Execure Query for insert & update
+        @params? : Dictionary parameters object
+
+        """
+        try:
+            self.connection.execute(text(self.sql), params if params else {})
+            return True
+        except Exception as e:
+            print(e)
+            raise Exception(e)
+
     def fetchall(self, params=None):
         """
         Fetch all data
-        @params? : Dictionary parameteres object
+        @params? : Dictionary parameters object
         """
         try:
             return_set = self.connection.execute(text(self.sql), params if params else {})
             return self._convert_tolist(return_set)
         except Exception as e:
             print(e)
-            return None
+            raise Exception(e)
 
     def fetchone(self, params=None):
         try:
@@ -190,5 +203,5 @@ class SqlRaw:
             return_set = self._convert_tolist(return_set)
             return return_set[0] if len(return_set) > 0 else None
         except Exception as e:
-            print(e)
+            raise Exception(e)
  
