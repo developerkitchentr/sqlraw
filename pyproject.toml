@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sqlraw"
-version = "0.1.2"
+version = "0.1.3"
 description = "Path base SQL Query"
 authors = ["Uygun Bodur <uygun@dop.com.tr>"]
 repository = "https://github.com/developerkitchentr/sqlraw"
